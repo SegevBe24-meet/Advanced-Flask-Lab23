@@ -43,16 +43,26 @@
                       </a>
                 
                       <a href="">
-                        <img src="{{url_for('static',filename='images/thumbs/02.jpg')}}" alt="" />
+                        <img src="{{url_for('static',filename='images/thumbs/02.jpg')}}" />
                         <h3>Caption... blah blah blah</h3>
                       </a>
                 </div>    
                 <div>
                   <a href="">
-                        <img src="{{url_for('static',filename='images/thumbs/03.jpg')}}" alt="" />
+                        <img src="{{url_for('static',filename='images/thumbs/03.jpg')}}"  />
                         <h3>Caption... blah blah blah</h3>
                       </a>
                 </div>  
+            <ul>
+                {% for posts in p %}
+                <div>
+                  <a href="">
+                        <img src="{{posts}}"  />
+                        <h3> {{p[posts]}} </h3>
+                      </a>
+                </div> 
+                {% endfor %}
+            </ul>
 
 							</section>
 
